@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<ul class="user-list list-group">
+  <li class="list-group-item flex" *ngFor="let user of users">
+    <div class="flex">
+      <span class="user-title">{{user.id}}: {{user.firstName}} {{user.lastName}}</span>
+      <div class="user-details flex">
+        <span>{{user.email}}</span>
+        <span>{{user.mobileNumber}}</span>
+        <span>{{user.dateOfBirth}}</span>
+      </div>
+    </div>
+    <a href="#" (click)="onDelete(user.id)">Delete</a>
+    <a [routerLink]="['/update/' + user.id]">Update</a>
+  </li>
+</ul>
+<button [routerLink]="['/add']">Add</button>

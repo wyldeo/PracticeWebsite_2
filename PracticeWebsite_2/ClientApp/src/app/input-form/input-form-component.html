@@ -1,0 +1,66 @@
+<form name="inputForm" (ngSubmit)="onSubmit()" [formGroup]="form">
+  <h2>{{title}}</h2>
+  
+  <div class="frm-grp">
+    <label for="firstName">First name</label>
+    <input type="text"
+           class="frm-control"
+           id="firstName"
+           required
+           formControlName="firstName"
+           name="firstName" />
+
+    <div *ngIf="firstName.dirty && firstName.invalid">First name is required.</div>
+  </div>
+
+  <div class="frm-grp">
+    <label for="lastName">Last name</label>
+    <input type="text"
+           class="frm-control"
+           id="lastName"
+           required
+           formControlName="lastName"
+           name="lastName" />
+
+    <div *ngIf="lastName.dirty && lastName.invalid">Last name is required.</div>
+  </div>
+
+  <div class="frm-grp">
+    <label for="email">Email address</label>
+    <input type="email"
+           class="frm-control email"
+           id="email"
+           required
+           formControlName="email"
+           name="email" />
+
+    <div *ngIf="email.dirty && email.invalid">Email is required.</div>
+  </div>
+
+  <div class="frm-grp">
+    <label for="mobileNumber">Mobile number</label>
+    <input type="tel"
+           class="frm-control"
+           id="mobileNumber"
+           required
+           formControlName="mobileNumber"
+           name="mobileNumber" />
+
+    <div *ngIf="mobileNumber.dirty && mobileNumber.invalid">Mobile number is required.</div>
+  </div>
+
+  <div class="frm-grp">
+    <label for="dateOfBirth">Date of birth</label>
+    <input type="date"
+           class="frm-control"
+           id="dateOfBirth"
+           required
+           formControlName="dateOfBirth"
+           name="dateOfBirth" />
+
+    <div *ngIf="dateOfBirth.dirty && dateOfBirth.invalid">Date of birth is required.</div>
+  </div>
+
+  <button type="submit" [disabled]="!allValid">Submit</button>
+  <span *ngIf="updated">Database updated successfully.</span>
+</form>

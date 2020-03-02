@@ -1,0 +1,39 @@
+ul.user-list > li {
+  justify-content: space-evenly;
+}
+
+.flex {
+  display: flex;
+}
+
+ul.user-list > li > div {
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+ul.user-list .user-details {
+  justify-content: space-evenly;
+  font-size: 12px;
+  width: 50%;
+}
+
+ul.user-list .user-details > span {
+  flex: 100%;
+}
+
+ul.user-list .user-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+ul.user-list {
+  padding-bottom: 10px;
+}
+
+ul.user-list > li > a {
+  align-self: center;
+}
+
+ul.user-list a {
+  margin-left: 8px;
+}

@@ -1,0 +1,11 @@
+/*.email {
+  box-sizing: border-box;
+}
+
+.email:valid {
+  border-left: 5px solid green;
+}
+
+.email:invalid {
+  border-left: 5px solid red;
+}*/
